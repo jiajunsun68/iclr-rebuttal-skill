@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "stats": {
+    "cases": 70,
+    "by_year": {
+      "2026": 49,
+      "2025": 12,
+      "2024": 9
+    },
+    "selection_roles": {
+      "qualified_positive": 19,
+      "core_positive": 22,
+      "context_only": 5,
+      "extended_positive": 16,
+      "outcome_counterexample": 6,
+      "evidence_exclusion": 2
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ICLR Rebuttal"
+  short_description: "Infer review concerns and draft evidence-based rebuttals"
+  default_prompt: "Use $iclr-rebuttal to diagnose my reviews, plan evidence, and draft a precise rebuttal."

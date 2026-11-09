@@ -1,46 +1,26 @@
-# 验证记录
+# Validation results — English-first bilingual release
 
-核查日期：**2026-11-09**。这是首版仓库的结构与行为核查，不是对论文结论的复现，也不是 rebuttal 提分效果的统计评估。
+[English](RESULTS.md) · [简体中文：initial release validation](RESULTS.zh-CN.md)
 
-## 检查范围与结果
+**Scope:** bilingual documentation, case localization and data-preserving search, built on the original 2026-11-09 source-linked case dataset. Original v1 test report is retained in Chinese without rewriting historical observations. These are **structural and behavior checks**, not an empirical study of acceptance rates.
 
-| 检查 | 结果 | 检查的实际内容 |
-|---|---|---|
-| skill-creator 的 `quick_validate.py` | 通过 | 实际技能目录的 SKILL 元数据与基本格式 |
-| `python3 scripts/validate_repository.py` | 通过 | 70 个独立 forum、年份/角色计数、核心案例接收状态与数值锚点、原站链接所属 forum、短引限制、本地链接与许可文件 |
-| `python3 -m unittest discover -s tests -v` | 5 项通过 | 多条件筛选、Unicode 查询、异常涨分不进入核心、跨工作目录运行、非法参数处理 |
-| Markdown 锚点与包内相对路径 | 通过 | 文内目录锚点存在；技能包引用不依赖仓库外部的本地文件 |
-| Humanizer MIT 文件 | 字节一致 | Git blob SHA 为 `625297fb778f32eb39d3a5b97e3e3b611b7304d6`，与固定版本上游 LICENSE 相同 |
-| 三个独立演练 | 均满足所列重点检查 | 混合争点决策、2026 评分状态、学术表达事实保真；详见下表和原始输出 |
+## Run locally
 
-结构检查的机器可读结果见 [structural-results.json](structural-results.json)。关键词检索覆盖案例正文与选择理由，因此可能命中提到目标论文的对照案例；精确定位演练使用完整 forum ID。
-
-## 演练方式
-
-三个执行者分别从独立上下文开始，仅获得对应任务文件、技能入口与输出位置。没有向执行者提供预期答案或检查清单。任务文件明确标为虚构材料；执行者可以查阅包内真实案例，但不能把案例中的实验或评分迁移成演练论文的事实。
-
-主执行者随后对输出与给定事实逐项比对。以下是有限的人工审阅记录，不是盲评、用户研究或对不同模型的稳定性保证。
-
-| 场景 | 重点检查 | 观察到的行为 | 结果与输出 |
-|---|---|---|---|
-| [1：混合审稿意见](01_mixed_review.md) | 同时识别事实误读、真实调参缺口、统计证据不足、漏引与范围边界；不伪造已完成工作 | 纠正 10,000 训练图与 100,000 参数量的混淆；承认 12 对 1 搜索不公平；0.3 个百分点不声称显著；为漏引/贡献归因错误致歉并计划修改；将医学影像作为需额外假设的未验证扩展；计划未写成结果 | 满足；英文草稿 204 个空白分隔词，低于 220 上限。[完整输出](outputs/01_response.md) |
-| [2：AC 状态摘要](02_ac_status.md) | 区分公开无条件意愿、尚未满足的条件、沉默与正式决定；不虚构全体共识 | 保留 R1 的 2→6 无条件意愿，但不声称评分栏已更新；R2 仅完成 200/1,000，条件未满足；R3 未回复不等于认可修订；拒绝“所有评审支持、所有问题已解决” | 满足；英文摘要 130 个空白分隔词，低于 140 上限。[完整输出](outputs/02_response.md) |
-| [3：表达精修](03_style_fidelity.md) | 数字、负结果、显著性、完成状态、公式、理论范围与引用键保持正确 | 保留 A +1.3、B +0.2、C −0.3 个百分点；按 p=0.08、α=0.05 删除显著性主张；五 seed 扩展仍为运行中；公式及引用键不变；将全局最优主张纠正为所给条件下的下降保证 | 满足。[完整输出](outputs/03_response.md) |
-
-## 适用限制
-
-- 三个场景检查的是会造成实质错误的行为，不覆盖所有学科、会议流程或用户输入。没有测量真实提分、接收率或“去 AI 味”的检测分数。
-- 结构验证只证明记录内部一致及链接路由正确，不能证明远端页面一直可访问、原论文实验可复现或选例归因具有因果效力。
-- 案例选取有目的，且 ICLR 2026 存在评分回滚；不能把 70 例或 22 个核心例子当作随机统计样本。
-- 模型输出中的实验数量、时间分配与措辞仍需作者根据真实成本、稿件和当前会场规则复核。未闭合草稿不能因为通过演练就成为真实论文可直接提交的回复。
-
-## 复跑方式
-
-在仓库根目录执行结构与检索检查：
-
-```bash
+~~~bash
 python3 scripts/validate_repository.py
 python3 -m unittest discover -s tests -v
-```
+~~~
 
-行为演练可在新的会话中指定 `skills/iclr-rebuttal/SKILL.md`，随后粘贴某个场景的内容。先保留原始输出，再根据上表重点与事实材料审阅，避免把参考输出提前提供给执行者。
+Checks validate:
+
+1. **70 distinct forum IDs**, 49/12/9 year counts, source URLs routed to the correct forum, original score-provenance preservation and correct selection-role counts (22 core, 16 extended, 19 qualified, 6 counterexamples, 2 exclusions, 5 contextual).
+2. Presence of **English descriptions for each of 70 cases**, original Chinese fields, and paired English/Chinese documentation for core modules.
+3. All local Markdown links, license/attribution files and absence of private scratch paths.
+4. Bilingual query behavior: English is default, \`--lang zh-CN\` returns Chinese, Unicode normalization works, the anomaly is not erroneously selected as core, source-preserving \`--raw\` works, and invalid limits are rejected.
+5. Historical source caveats remain visible in search output; localization does not turn stated intentions or AC predictions into verified saved scores.
+
+## Earlier behavioral exercises
+
+The original release included three independent simulated exercises: mixed reviewer critique (fact error, tuning mismatch, missing citation, significance and scope), AC summary (conditional/unconditional/no-response states), and academic language editing (numbers, negative findings, in-progress runs, formula and citations). The initial human-reviewed observations and outputs are retained in [the Chinese record](RESULTS.zh-CN.md), [scenario files](01_mixed_review.md) and [saved outputs](outputs/01_response.md).
+
+**Limitations:** Passing validation cannot establish that an OpenReview note remains accessible, a paper's experiment is reproducible, or particular rhetoric caused a score increase. The 2026 score rollback, source disagreements and purposive sampling require continued independent judgment. The bilingual update does not rerun full agent behavioral evaluations on real submissions.

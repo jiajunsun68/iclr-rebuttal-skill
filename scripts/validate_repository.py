@@ -73,6 +73,31 @@ def validate():
             errors.append(f'{cid}: more than 25 quoted English words')
         if not case.get('numeric_source') or not case.get('reading_scope'):
             errors.append(f'{cid}: missing provenance caveat')
+
+        # Every case must provide aligned English teaching text without altering the original source.
+        en = case.get('i18n', {}).get('en', {})
+        for field in ('concern', 'author_response_and_feedback', 'reusable_lesson',
+                      'selection_reason', 'caution', 'score_attribution', 'reading_scope'):
+            if not isinstance(en.get(field), str) or not en[field].strip():
+                errors.append(f'{cid}: missing English {field}')
+        if not case.get('forum_id') or not case.get('url'):
+            errors.append(f'{cid}: missing original OpenReview identity')
+    if data['metadata'].get('i18n', {}).get('default') != 'en':
+        errors.append('Default catalogue language must be English')
+    if set(data['metadata'].get('i18n', {}).get('supported', [])) != {'en', 'zh-CN'}:
+        errors.append('Both English and Simplified Chinese must be supported')
+    expected_pairs = [
+        ('README.md', 'README.zh-CN.md'),
+        ('evals/RESULTS.md', 'evals/RESULTS.zh-CN.md'),
+        ('skills/iclr-rebuttal/SKILL.md', 'skills/iclr-rebuttal/SKILL.zh-CN.md'),
+    ]
+    for stem in ('reviewer-intent', 'evidence-and-followup', 'templates',
+                 'case-selection', 'casebook', 'humanizer-academic'):
+        prefix = 'skills/iclr-rebuttal/references/'
+        expected_pairs.append((prefix + stem + '.md', prefix + stem + '.zh-CN.md'))
+    for en_path, zh_path in expected_pairs:
+        if not (ROOT / en_path).is_file() or not (ROOT / zh_path).is_file():
+            errors.append(f'Missing bilingual documentation: {en_path} / {zh_path}')
     expected_roles = data['metadata']['selection_summary']
     if dict(roles) != expected_roles:
         errors.append('Selection role counts disagree with metadata')

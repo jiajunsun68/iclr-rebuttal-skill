@@ -37,11 +37,51 @@ class CaseSearchTests(unittest.TestCase):
         data = json.loads(result.stdout)
         self.assertEqual(data['total_matches'], 1)
         self.assertEqual(data['cases'][0]['forum_id'], 'bkjKnO9s7T')
+        self.assertEqual(data['language'], 'en')
 
     def test_cli_rejects_invalid_limit(self):
         result = subprocess.run([sys.executable, str(SCRIPT), '--limit', '0'],
                                 cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(result.returncode, 2)
+
+    def test_all_70_cases_have_complete_english_translation(self):
+        self.assertEqual(len(CASES), 70)
+        for case in CASES:
+            en = case['i18n']['en']
+            for field in ('concern', 'author_response_and_feedback', 'reusable_lesson',
+                          'selection_reason', 'caution', 'score_attribution'):
+                self.assertTrue(en[field].strip(), (case['case_id'], field))
+
+    def test_english_default_text_and_chinese_switch(self):
+        eng = subprocess.run([sys.executable, str(SCRIPT), '--query', 'bkjKnO9s7T', '--limit', '1'],
+                             cwd=ROOT, capture_output=True, text=True, check=True).stdout
+        zh = subprocess.run([sys.executable, str(SCRIPT), '--query', 'bkjKnO9s7T', '--lang', 'zh-CN',
+                             '--limit', '1'], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+        self.assertIn('Scientific concern:', eng)
+        self.assertIn('Selection reason:', eng)
+        self.assertIn('争点：', zh)
+        self.assertIn('选例理由：', zh)
+
+    def test_chinese_json_localization(self):
+        result = subprocess.run([sys.executable, str(SCRIPT), '--query', 'FnSgecCEwg',
+                                 '--lang', 'zh-CN', '--format', 'json'],
+                                cwd=ROOT, capture_output=True, text=True, check=True)
+        row = json.loads(result.stdout)['cases'][0]
+        self.assertIn('校准', row['concern'])
+        self.assertEqual(row['forum_id'], 'FnSgecCEwg')
+
+    def test_english_query_finds_translated_case_summary(self):
+        rows = search.select_cases(CASES, 'matched training data', year=2024)
+        self.assertTrue(any(row['case_id'] == 'C64' for row in rows))
+
+    def test_raw_json_preserves_original_provenance(self):
+        result = subprocess.run([sys.executable, str(SCRIPT), '--query', 'bkjKnO9s7T',
+                                 '--format', 'json', '--raw'], cwd=ROOT,
+                                capture_output=True, text=True, check=True)
+        row = json.loads(result.stdout)['cases'][0]
+        self.assertIn('source_type', row)
+        self.assertIn('numeric_source', row)
+        self.assertIn('i18n', row)
 
 
 if __name__ == '__main__':

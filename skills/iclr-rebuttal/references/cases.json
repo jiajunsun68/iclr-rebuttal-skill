@@ -5,9 +5,9 @@
     "summary": {
       "total": 70,
       "by_year": {
-        "2026": 49,
+        "2024": 9,
         "2025": 12,
-        "2024": 9
+        "2026": 49
       },
       "by_decision": {
         "Accept (Poster)": 53,
@@ -42,9 +42,9 @@
     "selection_method": {
       "core_count": 22,
       "core_by_year": {
-        "2026": 16,
+        "2024": 4,
         "2025": 2,
-        "2024": 4
+        "2026": 16
       },
       "all_records_retained": true,
       "core_ids": [
@@ -205,8 +205,29 @@
           "C02",
           "C33"
         ]
+      },
+      "role_definitions_en": {
+        "core_positive": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain.",
+        "extended_positive": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism.",
+        "qualified_positive": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications.",
+        "outcome_counterexample": "Score movement or partial resolution that did not yield acceptance or close the critical condition.",
+        "evidence_exclusion": "Anomalous or conflicting numeric evidence excluded as clean reversal proof while preserved for audit.",
+        "context_only": "Decision or discussion context with no confirmed negative-to-positive numeric reviewer path."
       }
-    }
+    },
+    "i18n": {
+      "default": "en",
+      "supported": [
+        "en",
+        "zh-CN"
+      ],
+      "english_field": "case.i18n.en",
+      "chinese_field": "original case fields",
+      "notes": "English summaries independently paraphrase the original case analyses and do not alter source notes or numerical provenance."
+    },
+    "counting_unit_en": "One unique OpenReview paper forum per case; reviewer comments are not counted as separate papers.",
+    "score_caveat_en": "ICLR 2026 ratings/reviews were rolled back following the November 2025 incident. Visible ratings do not establish post-rebuttal scores. Keep first-person statements, intentions, conditions, author reports, AC recollections and predictions distinct.",
+    "selection_caveat_en": "This is a purposive teaching sample, not a representative success-rate dataset; score changes and acceptance do not establish causal impact of wording."
   },
   "cases": [
     {
@@ -285,6 +306,17 @@
           "claim_scope",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Novelty and judge dependence in a fairness benchmark",
+          "author_response_and_feedback": "Authors clarified contribution and evaluated a different judge; a reviewer acknowledged an increase",
+          "reusable_lesson": "Learn the novelty/positioning, evaluation validity, claim scope, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Authors clarified contribution and evaluated a different judge; a reviewer acknowledged an increase",
+          "caution": "Reviewer did not personally state the numeric target 6; that target comes from the authors' summary",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -356,6 +388,17 @@
           "url": "https://openreview.net/forum?id=FnSgecCEwg&noteId=un60K64zf2",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Calibration, sparsity evidence, and theoretical basis",
+          "author_response_and_feedback": "Clarified task-independent calibration and added evidence; reviewer explicitly moved 4→6",
+          "reusable_lesson": "Learn the evaluation validity, multi-round follow-up, claim scope, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Clarified task-independent calibration and added evidence; reviewer explicitly moved 4→6",
+          "caution": "Theory and some sparsity concerns survived; raised score does not mean full resolution",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -401,6 +444,17 @@
           "benchmark_value",
           "evaluation"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Memory benchmark validity and matched model comparisons",
+          "author_response_and_feedback": "Compute-matched controls and negative checks were examined in the AC's assessment",
+          "reusable_lesson": "Learn the baseline fairness, benchmark utility, evaluation validity response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Decision or discussion context with no confirmed negative-to-positive numeric reviewer path. Compute-matched controls and negative checks were examined in the AC's assessment",
+          "caution": "No first-person numeric raise is established; use for decision context only",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -484,6 +538,17 @@
           "baseline_fairness",
           "efficiency"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Image-token representation efficiency and claim boundaries",
+          "author_response_and_feedback": "Authors narrowed the title and answered efficiency and fairness questions; supportive reviewers increased support",
+          "reusable_lesson": "Learn the claim scope, baseline fairness, efficiency/cost response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Authors narrowed the title and answered efficiency and fairness questions; supportive reviewers increased support",
+          "caution": "Both target score numbers are from author summary and initial reviewers were already supportive",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -529,6 +594,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Efficiency and qualitative evidence for data-efficient LLM training",
+          "author_response_and_feedback": "Authors clarified cost and supporting observations for an already positively reviewed paper",
+          "reusable_lesson": "Learn the efficiency/cost, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Decision or discussion context with no confirmed negative-to-positive numeric reviewer path. Authors clarified cost and supporting observations for an already positively reviewed paper",
+          "caution": "Only an AC expectation of improvement is available, not reviewer numeric changes",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -588,6 +664,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Music-generation steering evaluation and independent baselines",
+          "author_response_and_feedback": "Added independent audio metrics and a prompt-only baseline to probe steering effects",
+          "reusable_lesson": "Learn the baseline fairness, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Added independent audio metrics and a prompt-only baseline to probe steering effects",
+          "caution": "The 8→10 increase was a supporter's intention, not a negative-to-positive reversal",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -660,6 +747,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Theory and evaluation of importance-sampled multimodal preference optimization",
+          "author_response_and_feedback": "Author answers addressed a critical reviewer's stated concern and clarified related work",
+          "reusable_lesson": "Learn the related work, theoretical repair, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Decision or discussion context with no confirmed negative-to-positive numeric reviewer path. Author answers addressed a critical reviewer's stated concern and clarified related work",
+          "caution": "Reviewer acknowledgment did not produce a confirmed score raise; another remained at 6",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -748,6 +846,17 @@
           "efficiency",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Scale, context-length coverage and evaluation scope",
+          "author_response_and_feedback": "Authors expanded tasks and sizes to address initially negative reviewers",
+          "reusable_lesson": "Learn the evaluation validity, baseline fairness, efficiency/cost, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Authors expanded tasks and sizes to address initially negative reviewers",
+          "caution": "Explicit 2→6 and 4→6 statements exist; mechanism overlaps with other core fairness cases",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -823,6 +932,17 @@
           "stated_target": 6,
           "url": "https://openreview.net/forum?id=wec4qy2XIF&noteId=yrS6CQAobd",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
+        }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Weak unlearning baselines, reproduction, and metric validity",
+          "author_response_and_feedback": "Audited and reran baselines, corrected comparisons and acknowledged competitor advantages; 2→6",
+          "reusable_lesson": "Learn the baseline fairness, evaluation validity, negative findings, manuscript revision, multi-round follow-up response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Audited and reran baselines, corrected comparisons and acknowledged competitor advantages; 2→6",
+          "caution": "Reviewer still withheld stronger endorsement because some optimality and metric issues remained",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
         }
       }
     },
@@ -934,6 +1054,17 @@
           "url": "https://openreview.net/forum?id=GFyVxtyMvq&noteId=6jKiyVjkYR",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Fair safety–utility comparison and practical null-space assumptions",
+          "author_response_and_feedback": "Matched reward model, used a distinct evaluator and explained approximation/distribution error; 2→4→6",
+          "reusable_lesson": "Learn the baseline fairness, theoretical repair, multi-round follow-up, negative findings, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Matched reward model, used a distinct evaluator and explained approximation/distribution error; 2→4→6",
+          "caution": "Approximate projection does not imply zero safety–utility tax in realistic use",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1008,6 +1139,17 @@
           "stated_target": 6,
           "url": "https://openreview.net/forum?id=LrHfYPFTtg&noteId=1nAh6t0eMT",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
+        }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Strong unlearning baseline and robustness of evaluation",
+          "author_response_and_feedback": "Converted promised baseline, multi-judge and sensitivity tests into checked results and manuscript changes; 2→6",
+          "reusable_lesson": "Learn the evaluation validity, baseline fairness, efficiency/cost, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Converted promised baseline, multi-judge and sensitivity tests into checked results and manuscript changes; 2→6",
+          "caution": "Pending experiments cannot be reported before they actually finish",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
         }
       }
     },
@@ -1093,6 +1235,17 @@
           "url": "https://openreview.net/forum?id=tCv1D3M7Lb&noteId=VRswyacvFu",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "A theoretical upper bound insufficient to justify a performance explanation",
+          "author_response_and_feedback": "Removed an overinterpreted theorem and rebuilt the argument through a more appropriate analysis; 2→6",
+          "reusable_lesson": "Learn the theoretical repair, claim scope, multi-round follow-up, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Removed an overinterpreted theorem and rebuilt the argument through a more appropriate analysis; 2→6",
+          "caution": "Do not claim the original inequality itself was false without separate proof",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1175,6 +1328,17 @@
           "url": "https://openreview.net/forum?id=inccdtfx8x&noteId=wHZtFOpZwy",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Scope of the claimed guidance mechanism",
+          "author_response_and_feedback": "Narrowed the applicable claim in the revised manuscript; reviewer then confirmed a move to 6",
+          "reusable_lesson": "Learn the claim scope, evaluation validity, manuscript revision, multi-round follow-up response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Narrowed the applicable claim in the revised manuscript; reviewer then confirmed a move to 6",
+          "caution": "A promised scope revision must be incorporated before confirmation is claimed",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1250,6 +1414,17 @@
           "evaluation",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Safety benchmark threat model, orthogonal tests, and evaluator validity",
+          "author_response_and_feedback": "Clarified threat assumptions and ran relevant ablations; one reviewer moved 4→6",
+          "reusable_lesson": "Learn the benchmark utility, evaluation validity, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Clarified threat assumptions and ran relevant ablations; one reviewer moved 4→6",
+          "caution": "This specialized benchmark complements rather than replaces the core benchmark examples",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1334,6 +1509,17 @@
           "stated_target": 6,
           "url": "https://openreview.net/forum?id=bkjKnO9s7T&noteId=PPgb7XQe7O",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
+        }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Whether a sandbox benchmark supports useful research beyond a leaderboard",
+          "author_response_and_feedback": "Described trajectory collection, task synthesis and evaluation code; reviewer moved 2→4→6",
+          "reusable_lesson": "Learn the benchmark utility, multi-round follow-up, evaluation validity, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Described trajectory collection, task synthesis and evaluation code; reviewer moved 2→4→6",
+          "caution": "Do not promise unsupported task diversity, long-term maintenance or evaluation reliability",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
         }
       }
     },
@@ -1427,6 +1613,17 @@
           "claim_scope",
           "negative_results"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Safety evaluation breadth for reasoning agents",
+          "author_response_and_feedback": "Added a language-only proxy and staged technical clarifications; reviewer expressed 2→4→6",
+          "reusable_lesson": "Learn the evaluation validity, multi-round follow-up, claim scope, negative findings response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Added a language-only proxy and staged technical clarifications; reviewer expressed 2→4→6",
+          "caution": "The proxy did not fully answer the request for agentic evaluation",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1500,6 +1697,17 @@
           "stated_target": 6,
           "url": "https://openreview.net/forum?id=U23A2BUKYt&noteId=R0u45YQc2S",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
+        }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Whether a learned agent orchestration component is necessary",
+          "author_response_and_feedback": "Replaced the module with a strong direct-model alternative and compared costs; reviewer moved 2→6",
+          "reusable_lesson": "Learn the baseline fairness, evaluation validity, efficiency/cost, novelty/positioning response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Replaced the module with a strong direct-model alternative and compared costs; reviewer moved 2→6",
+          "caution": "A stronger baseline can weaken the original contribution; report the actual trade-off",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
         }
       }
     },
@@ -1596,6 +1804,17 @@
           "url": "https://openreview.net/forum?id=FdkPOHlChS&noteId=l4fwsSOLl8",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Turing completeness theorem assumptions, previous work and trainability",
+          "author_response_and_feedback": "Clarified the formal theorem and its interpretation; reviewers reported 2→6 and 4→6",
+          "reusable_lesson": "Learn the theoretical repair, novelty/positioning, related work, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Clarified the formal theorem and its interpretation; reviewers reported 2→6 and 4→6",
+          "caution": "Expressive power is not an empirical training or practical deployment guarantee",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1667,6 +1886,17 @@
           "stated_target": 6,
           "url": "https://openreview.net/forum?id=w8rZ2Jd6Jo&noteId=MlSsFU2LBn",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
+        }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Overbroad AI-research benchmark scope and scarce negative outcomes",
+          "author_response_and_feedback": "Narrowed to LLM research and reported zero-score failures; reviewer moved 2→6",
+          "reusable_lesson": "Learn the benchmark utility, claim scope, negative findings, multi-round follow-up response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Narrowed to LLM research and reported zero-score failures; reviewer moved 2→6",
+          "caution": "Small task count and resource dependence still limit generalization",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
         }
       }
     },
@@ -1743,6 +1973,17 @@
           "claim_scope",
           "negative_results"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Applicability of semantic voting and reward variability",
+          "author_response_and_feedback": "Measured voting behavior and reward variance, with a first-person 2→6 statement",
+          "reusable_lesson": "Learn the evaluation validity, claim scope, negative findings response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Measured voting behavior and reward variance, with a first-person 2→6 statement",
+          "caution": "Coverage largely duplicates scope and evaluation cases in the core set",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1808,6 +2049,17 @@
           "evaluation",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Visual-system baseline strength and backend substitution",
+          "author_response_and_feedback": "Tested strong replacement backends and cost, with an expressed 4→8 willingness",
+          "reusable_lesson": "Learn the baseline fairness, efficiency/cost, evaluation validity, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Tested strong replacement backends and cost, with an expressed 4→8 willingness",
+          "caution": "Some later scores were conveyed by the AC; avoid collapsing separate source types",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1871,6 +2123,17 @@
           "evaluation",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Triangle multiplication's value beyond simplified engineering",
+          "author_response_and_feedback": "Clarified structural mechanism and comparison; reviewers promised or reported 4→6",
+          "reusable_lesson": "Learn the novelty/positioning, evaluation validity, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Clarified structural mechanism and comparison; reviewers promised or reported 4→6",
+          "caution": "One low reviewer stayed on the reject side; one score commitment could not be saved",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -1943,6 +2206,17 @@
           "url": "https://openreview.net/forum?id=BiXwSIIMIq&noteId=ajh21lnVqs",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Guarantees under unrealistic stationarity assumptions",
+          "author_response_and_feedback": "Reworked the analysis toward a finite-step implementable denoiser; two reviewers moved 4→6",
+          "reusable_lesson": "Learn the theoretical repair, claim scope, related work, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Reworked the analysis toward a finite-step implementable denoiser; two reviewers moved 4→6",
+          "caution": "Claim only the finite-step guarantees actually proven",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2012,6 +2286,17 @@
           "benchmark_value",
           "paper_revision"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "A visual-generation method's components and distribution shifts",
+          "author_response_and_feedback": "Added 2×2 ablations, external-distribution and diversity checks; reviewer promised 4→6",
+          "reusable_lesson": "Learn the evaluation validity, benchmark utility, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Added 2×2 ablations, external-distribution and diversity checks; reviewer promised 4→6",
+          "caution": "Score entry was unavailable and an additional change came from AC recollection",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2086,6 +2371,17 @@
           "url": "https://openreview.net/forum?id=j3gNYqrHtl&noteId=5wbsraNdEs",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Averages, arbitrary variable order and hyperparameter robustness",
+          "author_response_and_feedback": "Tested the specific alternative explanations; reviewer explicitly moved 4→6",
+          "reusable_lesson": "Learn the evaluation validity, claim scope, baseline fairness response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Tested the specific alternative explanations; reviewer explicitly moved 4→6",
+          "caution": "Only state robustness for tested orders and settings",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2156,6 +2452,17 @@
           "url": "https://openreview.net/forum?id=AG7fjg5azU&noteId=BDmE1pBu9v",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Actual implementation costs and backend portability",
+          "author_response_and_feedback": "Reported seconds, amortization and cross-backend tests; reviewer explicitly moved 4→6",
+          "reusable_lesson": "Learn the efficiency/cost, evaluation validity, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Reported seconds, amortization and cross-backend tests; reviewer explicitly moved 4→6",
+          "caution": "Do not extend measured hardware performance to untested backends",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2223,6 +2530,17 @@
           "multi_round",
           "paper_revision"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Finite-precision quantum attention analysis and proof correctness",
+          "author_response_and_feedback": "Multiple rounds repaired precision, complexity and classical subroutine assumptions; reviewer moved 4→8",
+          "reusable_lesson": "Learn the theoretical repair, multi-round follow-up, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Multiple rounds repaired precision, complexity and classical subroutine assumptions; reviewer moved 4→8",
+          "caution": "Reviewer criticized maturity of the original submission and the revision scale; learn proof repair, not deferral",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2296,6 +2614,17 @@
           "url": "https://openreview.net/forum?id=3uINmRldVW&noteId=yxNHvwiq0P",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Novelty of a merged auxiliary component",
+          "author_response_and_feedback": "Authors acknowledged the inherited component and recentered the contribution; reviewer moved 4→6",
+          "reusable_lesson": "Learn the novelty/positioning, related work, multi-round follow-up, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Authors acknowledged the inherited component and recentered the contribution; reviewer moved 4→6",
+          "caution": "Do not portray prior work adaptations as newly invented primitives",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2364,6 +2693,17 @@
           "evaluation",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Novelty and validation of segmentation for routing",
+          "author_response_and_feedback": "Tested addition to near-neighbor methods and examined label reliability; reviewer expressed 4→6",
+          "reusable_lesson": "Learn the novelty/positioning, baseline fairness, evaluation validity, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Tested addition to near-neighbor methods and examined label reliability; reviewer expressed 4→6",
+          "caution": "Some numbers are AC-reported; keep each path's attribution distinct",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2427,6 +2767,17 @@
           "evaluation",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Invariants and minimal tests for a Riemannian low-rank approach",
+          "author_response_and_feedback": "Provided a short invariant argument and classical diagnostic; reviewer moved 4→6",
+          "reusable_lesson": "Learn the theoretical repair, evaluation validity, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Provided a short invariant argument and classical diagnostic; reviewer moved 4→6",
+          "caution": "Another reviewer remained at 2; do not infer consensus",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2491,6 +2842,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Scope and interpretation of dynamical richness theory",
+          "author_response_and_feedback": "Clarified limited theoretical scope and evaluation; reviewer planned 4→6",
+          "reusable_lesson": "Learn the claim scope, theoretical repair, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Clarified limited theoretical scope and evaluation; reviewer planned 4→6",
+          "caution": "Planned increase is not a saved rating and remaining doubts persisted",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2560,6 +2922,17 @@
           "stated_target": 6,
           "url": "https://openreview.net/forum?id=HsB5EuQOoS&noteId=cWsuDKSibZ",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
+        }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Test threshold selection and stronger substitute methods",
+          "author_response_and_feedback": "Clarified selection protocol and ran stronger comparisons; lowest reviewer moved 2→6",
+          "reusable_lesson": "Learn the evaluation validity, baseline fairness, efficiency/cost response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Clarified selection protocol and ran stronger comparisons; lowest reviewer moved 2→6",
+          "caution": "Never gloss over test-set leakage if the actual protocol is invalid",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
         }
       }
     },
@@ -2633,6 +3006,17 @@
           "url": "https://openreview.net/forum?id=Ssevs8KCsU&noteId=6u69DwVi5N",
           "basis": "主表署名评审events直接数值陈述；无尚未兑现的条件。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Calibration of a geometric metric estimator",
+          "author_response_and_feedback": "Compared estimates against computable reference truth; reviewer explicitly moved 4→6",
+          "reusable_lesson": "Learn the evaluation validity, theoretical repair, efficiency/cost, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Compared estimates against computable reference truth; reviewer explicitly moved 4→6",
+          "caution": "AC static list disagreed with a later first-person statement; retain provenance",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2698,6 +3082,17 @@
           "multi_round",
           "paper_revision"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Quantifiers and scope of a dataset-distillation guarantee",
+          "author_response_and_feedback": "Clarified conditional existence and promised stronger scope discussion",
+          "reusable_lesson": "Learn the theoretical repair, claim scope, multi-round follow-up, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Clarified conditional existence and promised stronger scope discussion",
+          "caution": "A 4→6 raise was conditional on manuscript changes",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2762,6 +3157,17 @@
           "theory_repair",
           "evaluation"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "The interpretation and practicality of associative-memory dynamics",
+          "author_response_and_feedback": "Clarified theoretical object and provided additional diagnostics; reviewer was happy to move 2→6",
+          "reusable_lesson": "Learn the claim scope, theoretical repair, evaluation validity response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Clarified theoretical object and provided additional diagnostics; reviewer was happy to move 2→6",
+          "caution": "Keep the reviewer’s intention separate from an updated interface and pending experiments",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2831,6 +3237,17 @@
           "evaluation",
           "related_work"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Diffusion efficiency and competitive versus complementary baselines",
+          "author_response_and_feedback": "Reported absolute resource costs and clarified which systems should be compared; 4→6",
+          "reusable_lesson": "Learn the efficiency/cost, baseline fairness, evaluation validity, related work response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Reported absolute resource costs and clarified which systems should be compared; 4→6",
+          "caution": "Specialized diffusion example supplements, not supersedes, general fairness cases",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2900,6 +3317,17 @@
           "claim_scope",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Hyperparameter parity and communication–performance trade-off",
+          "author_response_and_feedback": "Disclosed undertuning and ran a fully tuned comparison; AC assessed the evidence positively",
+          "reusable_lesson": "Learn the baseline fairness, efficiency/cost, negative findings, claim scope, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Disclosed undertuning and ran a fully tuned comparison; AC assessed the evidence positively",
+          "caution": "A 4→6 was conditional; AC prediction of four 6s is not four saved raises",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -2970,6 +3398,17 @@
           "multi_round",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Parallel tempering cost and fair competing implementations",
+          "author_response_and_feedback": "Improved experimental cost evidence and reasoning in several rounds; reviewer moved 2→4→6",
+          "reusable_lesson": "Learn the efficiency/cost, baseline fairness, multi-round follow-up, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Improved experimental cost evidence and reasoning in several rounds; reviewer moved 2→4→6",
+          "caution": "Reviewer-to-reviewer exchange also influenced the assessment; rebuttal alone cannot be credited",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3035,6 +3474,17 @@
           "paper_revision",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Formal definitions, random sources and dependency structure",
+          "author_response_and_feedback": "Repaired definitions and algorithmic explanation; reviewer stated intention to move 4→6",
+          "reusable_lesson": "Learn the theoretical repair, manuscript revision, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Repaired definitions and algorithmic explanation; reviewer stated intention to move 4→6",
+          "caution": "Future-tense score is not verified saved state; another reviewer might remain unchanged",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3100,6 +3550,17 @@
           "claim_scope",
           "negative_results"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Whether representation changes follow the proposed mechanism",
+          "author_response_and_feedback": "Added longitudinal probes and hyperparameter transfer checks; reviewer moved 4→6",
+          "reusable_lesson": "Learn the evaluation validity, claim scope, negative findings response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Added longitudinal probes and hyperparameter transfer checks; reviewer moved 4→6",
+          "caution": "The evidence supports tested representation probes, not every causal account",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3164,6 +3625,17 @@
           "paper_revision",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Fair model-pruning evaluation and exact rating provenance",
+          "author_response_and_feedback": "Aligned experimental conditions and reported reviewer responses",
+          "reusable_lesson": "Learn the evaluation validity, baseline fairness, manuscript revision, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Aligned experimental conditions and reported reviewer responses",
+          "caution": "One 4→6 target was AC-sourced, a 2→4 path stayed negative; do not misattribute",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3231,6 +3703,17 @@
           "paper_revision",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Reliability, calibration and runtime of a generalized model",
+          "author_response_and_feedback": "Added evidence and elicited a supportive reviewer’s increased assessment",
+          "reusable_lesson": "Learn the evaluation validity, efficiency/cost, manuscript revision, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Added evidence and elicited a supportive reviewer’s increased assessment",
+          "caution": "No exact total new numeric score and the sole initially negative reviewer did not follow up",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3296,6 +3779,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Theory supporting model-soup weights and size of benefit",
+          "author_response_and_feedback": "Authors provided responses and several score increases were recorded by AC",
+          "reusable_lesson": "Learn the theoretical repair, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Score movement or partial resolution that did not yield acceptance or close the critical condition. Authors provided responses and several score increases were recorded by AC",
+          "caution": "Ultimately rejected; unresolved theoretical support and small benefit remained decisive",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3361,6 +3855,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Fusion baseline and reported improvement strength",
+          "author_response_and_feedback": "Responses led to reported 2→4 movement",
+          "reusable_lesson": "Learn the baseline fairness, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Score movement or partial resolution that did not yield acceptance or close the critical condition. Responses led to reported 2→4 movement",
+          "caution": "Still on the reject side and ultimately rejected; movement is not reversal",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3424,6 +3929,17 @@
           "paper_revision",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Privacy guarantee and plausible deniability scope",
+          "author_response_and_feedback": "Authors addressed some concerns and reviewer moved 2→4",
+          "reusable_lesson": "Learn the theoretical repair, claim scope, manuscript revision, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Score movement or partial resolution that did not yield acceptance or close the critical condition. Authors addressed some concerns and reviewer moved 2→4",
+          "caution": "Further 4→6 willingness depended on unclosed manuscript clarification; rejected",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3505,6 +4021,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Engineering complexity versus achieved gains",
+          "author_response_and_feedback": "Authors answered cost and experiment questions; two reviewers moved 4→6",
+          "reusable_lesson": "Learn the efficiency/cost, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Score movement or partial resolution that did not yield acceptance or close the critical condition. Authors answered cost and experiment questions; two reviewers moved 4→6",
+          "caution": "Ultimately rejected: AC found complexity, effect and coverage insufficient",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3572,6 +4099,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Contrastive objective and Gaussian-distribution claims",
+          "author_response_and_feedback": "Authors revised theory positioning and added controlled SimCLR experiments; AC supported the paper",
+          "reusable_lesson": "Learn the novelty/positioning, theoretical repair, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Decision or discussion context with no confirmed negative-to-positive numeric reviewer path. Authors revised theory positioning and added controlled SimCLR experiments; AC supported the paper",
+          "caution": "Initial 8/4/2/2 and final Oral are not a verified per-reviewer score reversal vector",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3635,6 +4173,17 @@
           "theory_repair",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Evidence for the GAGA formulation and theoretical framing",
+          "author_response_and_feedback": "One reviewer expressed a 2→6 intention after revisions",
+          "reusable_lesson": "Learn the evaluation validity, theoretical repair, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. One reviewer expressed a 2→6 intention after revisions",
+          "caution": "Another reviewer disputed the AC's expectation of broader agreement",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3697,6 +4246,17 @@
           "evaluation",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Engineering contribution despite multiple low initial scores",
+          "author_response_and_feedback": "AC independently evaluated manuscript and author explanations; final Poster",
+          "reusable_lesson": "Learn the baseline fairness, novelty/positioning, evaluation validity, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Decision or discussion context with no confirmed negative-to-positive numeric reviewer path. AC independently evaluated manuscript and author explanations; final Poster",
+          "caution": "No first-person numeric reversals for those initial negatives were established",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3746,6 +4306,17 @@
           "ac_summary",
           "evaluation"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Abrupt anomalous score change in a model-extraction defense",
+          "author_response_and_feedback": "Other reviews and rebuttal supported acceptance, but a 1→8 jump lacked explanatory dialogue",
+          "reusable_lesson": "Learn the AC summary/evidence attribution, evaluation validity response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Anomalous or conflicting numeric evidence excluded as clean reversal proof while preserved for audit. Other reviews and rebuttal supported acceptance, but a 1→8 jump lacked explanatory dialogue",
+          "caution": "AC explicitly excluded that review as an outlier; never use it as successful-rebuttal proof",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3798,6 +4369,17 @@
           "baseline_fairness",
           "efficiency"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Generalization of bidirectional generative representation claims",
+          "author_response_and_feedback": "Expanded text-to-image evidence and corrected interpretive ambiguity; reviewer moved 3→6",
+          "reusable_lesson": "Learn the claim scope, evaluation validity, baseline fairness, efficiency/cost response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Expanded text-to-image evidence and corrected interpretive ambiguity; reviewer moved 3→6",
+          "caution": "Additional application-specific scope example, not a unique default mechanism",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3866,6 +4448,17 @@
           ],
           "basis": "本人明确已调至6；另一位fv2J亦有明确5→6。 已在现有past_raw快照中回查署名和文字，未新增外网研究。初分精确历史依原讨论与配对档案分别陈述，不把快照等同首次提交分。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Uncited related work and novelty of generative speech enhancement",
+          "author_response_and_feedback": "Acknowledged missing citation and compared mechanisms and tasks; reviewer moved 3→6",
+          "reusable_lesson": "Learn the related work, novelty/positioning, manuscript revision, multi-round follow-up response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Acknowledged missing citation and compared mechanisms and tasks; reviewer moved 3→6",
+          "caution": "Adding a citation alone does not resolve a novelty critique",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3932,6 +4525,17 @@
           ],
           "basis": "本人明确决定把rating提高至6。 已在现有past_raw快照中回查署名和文字，未新增外网研究。初分精确历史依原讨论与配对档案分别陈述，不把快照等同首次提交分。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Whether a resubmission had materially improved",
+          "author_response_and_feedback": "Listed exact manuscript changes and new evidence; reviewer explicitly moved 3→6",
+          "reusable_lesson": "Learn the manuscript revision, evaluation validity, related work, negative findings response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Listed exact manuscript changes and new evidence; reviewer explicitly moved 3→6",
+          "caution": "Verify that every claimed revision exists in the submitted version",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -3985,6 +4589,17 @@
           "claim_scope",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Scale limits and out-of-memory behavior of a variational method",
+          "author_response_and_feedback": "Reported scaling and OOM results, with archived score improvements",
+          "reusable_lesson": "Learn the evaluation validity, efficiency/cost, claim scope, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Reported scaling and OOM results, with archived score improvements",
+          "caution": "AC discounted highly similar reviews; some number paths rely on snapshot pairing",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4037,6 +4652,17 @@
           "efficiency",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Related-work placement, sample budget and compute",
+          "author_response_and_feedback": "Explained sampling and cost accounting; one reviewer explicitly moved 5→6",
+          "reusable_lesson": "Learn the related work, evaluation validity, efficiency/cost, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Explained sampling and cost accounting; one reviewer explicitly moved 5→6",
+          "caution": "The larger 3→6 history is AC-confirmed without a corresponding reviewer textual statement",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4090,6 +4716,17 @@
           "claim_scope",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Robustness and multi-key performance of a diffusion method",
+          "author_response_and_feedback": "Paired snapshot showed four reviews shifting 5→6",
+          "reusable_lesson": "Learn the evaluation validity, negative findings, claim scope, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Score movement or partial resolution that did not yield acceptance or close the critical condition. Paired snapshot showed four reviews shifting 5→6",
+          "caution": "Ultimately rejected; broad superiority claims were inconsistent with negative results",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4144,6 +4781,17 @@
           "paper_revision",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Whether a representation method actually qualifies as zero-shot",
+          "author_response_and_feedback": "Some reviewers increased scores following discussion",
+          "reusable_lesson": "Learn the claim scope, baseline fairness, manuscript revision, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Score movement or partial resolution that did not yield acceptance or close the critical condition. Some reviewers increased scores following discussion",
+          "caution": "Ultimately rejected; ID-data PCA made the zero-shot framing and comparison fundamentally problematic",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4197,6 +4845,17 @@
           "baseline_fairness",
           "paper_revision"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Annotation reliability and matched model comparisons in multi-modal tuning",
+          "author_response_and_feedback": "Expanded blind human evaluation and corrected dataset statistics",
+          "reusable_lesson": "Learn the evaluation validity, benchmark utility, baseline fairness, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Expanded blind human evaluation and corrected dataset statistics",
+          "caution": "Large raises rely partly on paired score archive; numeric targets not all stated directly",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4251,6 +4910,17 @@
           "negative_results",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Reported score trajectory for network mixture of experts",
+          "author_response_and_feedback": "Hardware-cost boundary and real measurements are useful",
+          "reusable_lesson": "Learn the efficiency/cost, claim scope, negative findings, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Anomalous or conflicting numeric evidence excluded as clean reversal proof while preserved for audit. Hardware-cost boundary and real measurements are useful",
+          "caution": "Score archive conflicts with AC's description of initial scores; do not call it a clean numerical reversal",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4306,6 +4976,17 @@
           "related_work",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "GPU kernel speed and controlled benchmark methodology",
+          "author_response_and_feedback": "Measured precision, kernel configuration and shape variation; reviewer sentiment improved",
+          "reusable_lesson": "Learn the efficiency/cost, evaluation validity, related work, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Measured precision, kernel configuration and shape variation; reviewer sentiment improved",
+          "caution": "5→8 targets depend on paired scores rather than direct first-person target statements",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4360,6 +5041,17 @@
           "claim_scope",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Time-versus-quality trade-offs in Bayesian optimization",
+          "author_response_and_feedback": "Added timing curves and stronger GP comparisons; acknowledged possible overclaim",
+          "reusable_lesson": "Learn the efficiency/cost, baseline fairness, negative findings, claim scope, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Added timing curves and stronger GP comparisons; acknowledged possible overclaim",
+          "caution": "Score path comes from archived pairing; Spotlight decision still had a 5-score review",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4412,6 +5104,17 @@
           "paper_revision",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Self-correction claims under different prompting and titles",
+          "author_response_and_feedback": "Narrowed the title and added evaluations, including a supportive 6→8 path",
+          "reusable_lesson": "Learn the claim scope, evaluation validity, manuscript revision, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Narrowed the title and added evaluations, including a supportive 6→8 path",
+          "caution": "Negative 3→6 path was conditional; archives and reviewer initial self-report conflict",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4465,6 +5168,17 @@
           "theory_repair",
           "paper_revision"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Activation-capacity confounds and reinforcement-learning evaluation",
+          "author_response_and_feedback": "Performed capacity-controlled ablations and explained mechanism",
+          "reusable_lesson": "Learn the evaluation validity, baseline fairness, theoretical repair, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Performed capacity-controlled ablations and explained mechanism",
+          "caution": "Useful RL-specific complement to the more generally applicable core examples",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4535,6 +5249,17 @@
           ],
           "basis": "本人明确已提高到8，反馈将其置于同数据重训之后。 已在现有past_raw快照中回查署名和文字，未新增外网研究。初分精确历史依原讨论与配对档案分别陈述，不把快照等同首次提交分。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Pose-free reconstruction baseline unfairly trained on different data",
+          "author_response_and_feedback": "After a weak first explanation, actually retrained the competitor on matched training data; reviewer 3→8",
+          "reusable_lesson": "Learn the baseline fairness, multi-round follow-up, claim scope, evaluation validity response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. After a weak first explanation, actually retrained the competitor on matched training data; reviewer 3→8",
+          "caution": "Do not assume a mismatch is harmless merely because another generalization metric is interesting",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4588,6 +5313,17 @@
           "novelty",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Convolution comparisons in learnable-spacings SNNs",
+          "author_response_and_feedback": "Added a standard-convolution control; reviewer trajectory reached 3→8",
+          "reusable_lesson": "Learn the baseline fairness, evaluation validity, novelty/positioning, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Positive or improved outcome requiring attribution, condition, timing, rhetoric, or reviewer-stance qualifications. Added a standard-convolution control; reviewer trajectory reached 3→8",
+          "caution": "Reviewer criticized the aggressive reply tone; never copy rhetoric as the lesson",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4642,6 +5378,17 @@
           "negative_results",
           "ac_summary"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Diagonal versus full covariance necessity and training cost",
+          "author_response_and_feedback": "Ran directly matched covariance and compute ablations; multiple reviewers increased",
+          "reusable_lesson": "Learn the evaluation validity, multi-round follow-up, efficiency/cost, negative findings, AC summary/evidence attribution response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Ran directly matched covariance and compute ablations; multiple reviewers increased",
+          "caution": "Useful robotics extension of minimal-discriminative-experiment principle",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4709,6 +5456,17 @@
             "https://openreview.net/forum?id=KuPixIqPiq&noteId=nQ8FN6D4Av"
           ],
           "basis": "本人在原review的weaknesses字段更新中明确写3→5，进一步回应后升到6。 已在现有past_raw快照中回查署名和文字，未新增外网研究。初分精确历史依原讨论与配对档案分别陈述，不把快照等同首次提交分。"
+        }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Whether self-debug gain was really a prompt artifact",
+          "author_response_and_feedback": "Identified the precise paired-prompt confound and ran matching controls; reviewer 3→5→6",
+          "reusable_lesson": "Learn the baseline fairness, multi-round follow-up, evaluation validity, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Identified the precise paired-prompt confound and ran matching controls; reviewer 3→5→6",
+          "caution": "Earlier generic reply was insufficient; respond to the new remaining concern",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
         }
       }
     },
@@ -4780,6 +5538,17 @@
           ],
           "basis": "本人Score update明确列Overall score: 3→6，同时说明删除误导术语的价值。 已在现有past_raw快照中回查署名和文字，未新增外网研究。初分精确历史依原讨论与配对档案分别陈述，不把快照等同首次提交分。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Toy binary-sequence assumptions, terminology and external relevance",
+          "author_response_and_feedback": "Removed misleading terms, clarified guarantees and linked toy setup to real-world claims",
+          "reusable_lesson": "Learn the claim scope, theoretical repair, evaluation validity, manuscript revision response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Removed misleading terms, clarified guarantees and linked toy setup to real-world claims",
+          "caution": "Avoid presenting toy formal results as unrestricted empirical generalization",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4850,6 +5619,17 @@
           ],
           "basis": "本人明确将升到8，回应说明疑虑已解决。 已在现有past_raw快照中回查署名和文字，未新增外网研究。初分精确历史依原讨论与配对档案分别陈述，不把快照等同首次提交分。"
         }
+      },
+      "i18n": {
+        "en": {
+          "concern": "Novelty of locality and weight-sharing proof tools",
+          "author_response_and_feedback": "Explained precisely where the prior proof failed and how a new lemma repairs it; reviewer 3→8",
+          "reusable_lesson": "Learn the novelty/positioning, theoretical repair, related work, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Primary accepted example with a reviewer’s first-person numeric raise or unconditional numeric intention and a traceable action–feedback chain. Explained precisely where the prior proof failed and how a new lemma repairs it; reviewer 3→8",
+          "caution": "Do not claim novelty until the exact added argument is differentiated",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     },
     {
@@ -4904,6 +5684,17 @@
           "negative_results",
           "claim_scope"
         ]
+      },
+      "i18n": {
+        "en": {
+          "concern": "Video reconstruction evaluation breadth and cherry-pick risk",
+          "author_response_and_feedback": "Reported full sequences, more scenes and ablations; two reviewers moved 3→8",
+          "reusable_lesson": "Learn the evaluation validity, multi-round follow-up, negative findings, claim scope response strategy, using the linked evidence chain rather than its rhetoric.",
+          "selection_reason": "Supplementary accepted example, specialized or overlapping with a core teaching mechanism. Reported full sequences, more scenes and ablations; two reviewers moved 3→8",
+          "caution": "Useful visual-reconstruction complement; not a separate universal persuasion tactic",
+          "score_attribution": "Interpret this case's numerical path using the original events, numeric_source and source_type; a score intention/prediction is not necessarily a saved rating.",
+          "reading_scope": "Relevant reviewer–author exchange and AC decision were traced where available. Not every unrelated discussion branch was reviewed."
+        }
       }
     }
   ]

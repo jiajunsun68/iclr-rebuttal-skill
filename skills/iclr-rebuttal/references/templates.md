@@ -1,69 +1,75 @@
-# 按回应动作选择表达
+# Response templates by substantive action
 
-所有模板都是本项目新写的结构示例。方括号是待填内容，不是实测结果。按已核实状态选择时态；只承诺确有能力完成的工作。直接使用用户提供且已确认的数字，不创造“合理”数字。
+[English](templates.md) · [简体中文说明与模板](templates.zh-CN.md)
 
-## 1. 澄清已有证据
+These are original, adaptable *structures*, not actual text from the ICLR case authors. Brackets denote unverified placeholders. No template authorizes inventing measurements, citations, reviewer agreement, or finished manuscript edits. Choose the tense appropriate to the fact ledger and remove unused alternatives.
 
-> Both methods use [verified identical condition], as specified in [location]. The difference is [precise distinction]. We [have clarified / will clarify] this setup in [location] so that the comparison is easier to check.
+## 1. Clarify existing evidence
 
-适用：事实已有依据但呈现不清。把 `have` 与 `will` 二选一，不把斜杠留在可提交版本。若现有证据不足，改为补充证据，而非暗示评审漏读就已解决。
+> Both methods use [verified matched condition], as specified in [location]. They differ in [precise distinction]. We [have clarified / will clarify] this setup in [location] so the comparison is easier to verify.
 
-## 2. 明确反驳事实或数学错误
+Use when evidence exists but presentation is unclear. Do not finish with “please see our paper”; quote the essential distinction. If the existing control is genuinely inadequate, proceed to add evidence rather than treating it as reviewer oversight.
 
-> The statement that [disputed claim] does not hold under the setting of [definition/assumption]. Specifically, [checkable fact, derivation, or counterexample]. This establishes [limited conclusion]. We [have added / will add] [clarification] at [location].
+## 2. Rebut a demonstrably false factual or mathematical premise
 
-适用：已能核验的错误。先检查自己是否理解其设定，再反驳。纠正观点即可，不评论评审能力。
+> The statement that [disputed premise] does not hold under [specified definition/assumption]. In particular, [checkable derivation, configuration, or counterexample]. This supports [bounded conclusion]. We [have clarified / will clarify] [explanation] in [location].
 
-## 3. 接受批评并修复真实错误
+Check that the reviewer and authors are using the same settings. Correct the proposition, not the reviewer’s competence. Do not apologize for a supported disagreement.
 
-> You are right that [specific error]. We apologize for [brief, concrete issue if material]. We [have corrected / will correct] [change]. [Verified analysis of the impact, or a clear statement that the impact is still being checked.] The corresponding revision is [location/status].
+## 3. Admit and correct a real error
 
-适用：漏引、错误数字、实现或证明问题已确认。轻微表述问题可直接承认并改写，不必每次加入道歉句。
+> You are correct that [specific verified mistake]. We apologize for [material mistake, if appropriate]. We [have corrected / will correct] [concrete change]. [State verified effect on results, or explicitly say the impact is still being evaluated.] The revision is [actual location or pending status].
 
-## 4. 补实证，结果已经核验
+Use for a missing citation, numerical/implementation error, unfair comparison, or unsound proof—not for routine theoretical disagreement. A minor explanation problem often needs acknowledgement and correction without an apology.
 
-> We tested whether [alternative explanation] accounts for the improvement by [matched comparison]. Under the same [data/budget/protocol], [verified result with relevant variability]. This supports [precise conclusion] within [scope]. We have added the result to [actual revision location].
+## 4. Report verified additional evidence
 
-最后一句只用于确已写回稿件的情况。数值小、噪声大或结果混合时，报告实际限制，不自动写 significantly 或 consistently outperforms。
+> We tested whether [alternative explanation] accounts for the improvement using [discriminative, matched comparison]. Under the same [data/budget/protocol], we observed [actual result and relevant uncertainty]. This supports [precise conclusion] within [specified scope]. We have added [actual result] to [real revision location].
 
-## 5. 关键实验尚未完成
+Delete the last sentence if the result has not been incorporated. A negative or mixed result should be reported as such; do not insert “significant,” “consistently,” or “state of the art” without support.
 
-> The current results do not isolate [confound]. We plan to run [specific comparison] under [matched conditions]. Until that result is available, we [have narrowed / will narrow] the claim to [supported scope]. We cannot yet conclude [unresolved stronger claim].
+## 5. Evidence is important but not yet available
 
-适用：必须补证据但结果尚无。若实验也无法承诺完成，删去 `plan to run`，明确当前不能解决，并给范围修正或待办供用户决策。
+> The present comparison does not isolate [confound]. We [plan to test / cannot currently complete] [specific control] under [matched conditions]. Until those results are available, we [have narrowed / will narrow] the conclusion to [currently supported scope]. We cannot yet establish [stronger assertion].
 
-## 6. 收窄过强主张
+Only say “plan to test” when feasible. This is a transparent interim statement, not a submission-ready positive result.
 
-> We agree that the original statement was too broad. The supported claim is [narrower claim] under [assumptions]. We [have removed / will remove] [unsupported statement] and [have added / will add] [appropriate evidence or limitation]. The remaining contribution is [specific, supported value].
+## 6. Narrow an overbroad claim
 
-收窄后检查标题、摘要、贡献、定理及实验结论是否一致。不要只在评论区作限定。
+> We agree that our original claim was too broad. The evidence supports [new bounded claim] under [conditions], but does not establish [unsupported generalization]. We [have revised / will revise] the abstract, [relevant theorem or experiment], and the limitations accordingly.
 
-## 7. 承认已有组件，说明新增贡献
+When novelty is questioned, distinguish inherited components from a new mechanism, insight, setting or capability.
 
-> [Component A] builds on [verified prior work]. Our contribution is [specific new objective/analysis/capability], supported by [evidence]. We [have revised / will revise] [locations] to separate the inherited component from the new contribution.
+## 7. Address related work and novelty precisely
 
-若漏引，先明确承认并补比较；仅添加引用不等于已经说明差异。
+> [Prior work] already introduces [shared mechanism], which our original draft did not sufficiently distinguish. Our contribution is [specific new result/problem/implementation], not [inherited component]. We have added [direct comparison or corrected citation] to [actual location].
 
-## 8. 解释不适用或超出当前主张的实验要求
+If a citation was omitted, acknowledge the omission directly. Do not portray recombination as an entirely new primitive.
 
-> The proposed comparison evaluates [different question]. Our claim concerns [declared setting], where [relevant reason]. We can address the underlying concern about [scientific concern] with [closer comparison or analysis]. We [have made / will make] this scope explicit in [location].
+## 8. Decline an out-of-scope requirement without evasiveness
 
-先检查“超出范围”是否真实：如果摘要确实作了广泛主张，就应补证据或收窄，而不是借范围拒绝验证。
+> [Requested setting] changes [assumption/target task] relative to the claim studied here. We therefore do not use the present evidence to claim success in that setting. To clarify the boundary, we [have added / will add] [scope statement or feasible diagnostic] in [location].
 
-## 9. 回答新的剩余追问
+A request can still expose a weakness in generalization; assess whether the paper itself promised that scope.
 
-> The remaining issue is whether [latest concern]. [Direct answer.] The relevant evidence is [new or clarified evidence], which [limited implication]. [Revision/status and remaining limitation.] If another issue remains central to your recommendation, we would appreciate a specific pointer.
+## 9. Respond to a follow-up
 
-最后一句按需要使用，避免每条机械询问，也不要求评审先承诺提分。
+> The remaining question is whether [reviewer's latest concern]. Our first reply addressed [previous, distinct issue] but did not establish [missing link]. We now [provide new, verified evidence or explicitly state current limitation]. The updated [section/table] is [location].
 
-## 10. AC 摘要
+Do not paste the previous rebuttal in full. If the new work is pending, label the pending state.
 
-> Dear Area Chair,
->
-> The main concerns were [A], [B], and [C]. We have completed [verified changes] and incorporated them in [actual locations].
->
-> R1 explicitly stated [accurate stance; link]. R2 acknowledged [point] but retained [remaining concern; link]. R3 has not responded, so we do not assume a change in assessment.
->
-> The remaining limitation is [limitation]. Within this scope, the contribution is [supported value]. These links and locations summarize the evidence relevant to your assessment.
+## 10. Ask a narrow clarification question
 
-只在全部所列修改确已完成并落稿时使用第一段完成时。将条件性提分、AC 预测和作者理解分别标注，不把它们并成共识。
+> We read this comment as asking whether [testable interpretation A], rather than [materially different B]. We can test [control] for A, while B would require [different scope]. Which is the concern most relevant to the recommendation?
+
+Ask only when the distinction changes action. If both are directly answerable, answer them first.
+
+## 11. AC summary with evidence attribution
+
+> The main concerns were [A], [B] and [C]. We have incorporated [verified changes and locations]. R1 explicitly [reported an increase / expressed an unconditional intention / gave a conditional intention] in [note]. R2 [partly accepted / did not reply / remained opposed] regarding [issue]. The outstanding limitation is [X]. We do not claim reviewer agreement beyond these records.
+
+Do not turn a conditional “would raise if X” into “raised,” or an AC prediction into a reviewer action.
+
+## Final language audit
+
+Check every number, equation, negative statement, assumption, statistical inference, experimental completion verb, reviewer position and revision location against the supplied materials. Use [the academic Humanizer adaptation](humanizer-academic.md) *only after* the substantive claim is correct.
